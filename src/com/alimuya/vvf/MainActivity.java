@@ -1,5 +1,7 @@
 package com.alimuya.vvf;
 
+import retrofit.client.OkClient;
+
 import com.alimuya.resfacade.test.RestTest;
 import com.alimuya.resfacade.test.TestUser;
 
