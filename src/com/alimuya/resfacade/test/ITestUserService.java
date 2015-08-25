@@ -1,13 +1,11 @@
-package com.alimuya.resfacade.test.retrofit;
+package com.alimuya.resfacade.test;
 
 import retrofit.http.Body;
 import retrofit.http.GET;
 import retrofit.http.POST;
 import retrofit.http.Path;
 
-import com.alimuya.resfacade.test.TestUser;
-
-public interface IRetrofitTestUserService {
+public interface ITestUserService {
 	@GET("/user/{id}")
 	public TestUser loadUser(@Path("id") int id);
 	@POST("/user")
