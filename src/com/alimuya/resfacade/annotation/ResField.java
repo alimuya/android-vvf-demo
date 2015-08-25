@@ -15,6 +15,6 @@ import java.lang.annotation.Target;
 @Inherited
 @Retention(RetentionPolicy.RUNTIME)
 @Documented
-public @interface IgnoreField {
+public @interface ResField {
 
 }
