@@ -1,14 +1,14 @@
 package com.alimuya.vvf;
 
-import retrofit.client.OkClient;
-
-import com.alimuya.resfacade.test.RestTest;
-import com.alimuya.resfacade.test.TestUser;
-
-import android.os.Bundle;
 import android.app.Activity;
+import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
+
+import com.alimuya.resfacade.test.TestUser;
+import com.alimuya.resfacade.test.spring.SpringTest;
+import com.google.gson.Gson;
+import com.google.gson.JsonObject;
 
 public class MainActivity extends Activity {
 
@@ -25,14 +25,15 @@ public class MainActivity extends Activity {
 				testUser.setNickname("xiaoxin");
 				testUser.setPassword("123456");
 				testUser.setTime(System.currentTimeMillis());
-				RestTest.create(testUser);
+//				RetrofitTest.create(testUser);
 //				TestUser user = RestTest.load(1);
 //				Log.v("alimuya", user.toString());
-				
+				SpringTest test=new SpringTest();
+				TestUser user = test.create(testUser);
+//				TestUser user =test.load(1);
+				Log.v("alimuya", user.toString());
 			}
 		}).start();
-		
-		
 	}
 
 	@Override
