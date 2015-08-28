@@ -1,10 +1,15 @@
 package com.alimuya.resfacade.test;
 
+import com.alimuya.resfacade.annotation.ResField;
+import com.alimuya.resfacade.annotation.RestRemote;
+@RestRemote(value = "")
 public class TestUser {
 	private int uid=0;
+	@ResField
 	private String password;
 	private String nickname;
 	private int age;
+	@ResField
 	private long time;
 	
 	public int getUid() {

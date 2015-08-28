@@ -20,17 +20,17 @@ public class MainActivity extends Activity {
 			
 			@Override
 			public void run() {
-				TestUser testUser=new TestUser();
-				testUser.setAge(18);
-				testUser.setNickname("xiaoxin");
-				testUser.setPassword("123456");
-				testUser.setTime(System.currentTimeMillis());
+//				TestUser testUser=new TestUser();
+//				testUser.setAge(18);
+//				testUser.setNickname("xiaoxin");
+//				testUser.setPassword("123456");
+//				testUser.setTime(System.currentTimeMillis());
 //				RetrofitTest.create(testUser);
 //				TestUser user = RestTest.load(1);
 //				Log.v("alimuya", user.toString());
 				SpringTest test=new SpringTest();
-				TestUser user = test.create(testUser);
-//				TestUser user =test.load(1);
+//				TestUser user = test.create(testUser);
+				TestUser user =test.load(1);
 				Log.v("alimuya", user.toString());
 			}
 		}).start();
